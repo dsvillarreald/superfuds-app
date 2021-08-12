@@ -1,0 +1,115 @@
+
+.card-content {
+    width: 250px;
+    height: 310px;
+}
+.card-body {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgb(170 192 208 / 50%);
+    height: 90%;
+}
+.card-header {
+    background-color: #fff !important;
+    height: 70%;  
+}
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 5% 5% 5% 5%;
+}
+
+.card-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 5% 5% 5% 0%;
+}
+
+.card-icon {
+    margin-bottom: 20%;
+}
+
+.tooltip [class$="inner"] {
+    background-color: #065f71;
+    border: 1px solid #065f71;
+}
+
+.tooltip [class$="arrow"] {
+    display: none !important;
+}
+
+.text-tool {
+    text-align: start;
+    .text-body-tool {
+        color: #ffff;
+    }
+    .text-title-tool {
+        color: #dbad65;
+        font-weight: 500;
+    }
+}
+
+.text-footer-card {
+
+    align-content: center;
+    justify-content: space-between;
+    margin: 2% 0%;
+
+    .text-title {
+        color: #76d8a1;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .card-gramer {
+        border-radius: 17px;
+        width: 23%;
+        background-color: #269e7e;
+        color: #fff;
+        font-weight: 400;
+        height: 3.5vh;
+        line-height: 3.5vh;
+        font-size: 12px;
+    }
+}
+
+.text-name {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.text-price-card {
+    @extend .text-name;
+    align-self: flex-end;
+    .span-price-symbol {
+        color: #25c16a;
+    }
+    .span-price-utits {
+        color: #909090;
+        font-weight: 300;
+        font-size: 16px;
+    }
+}
+.card-border-body {
+    height: 1px;
+    background-color: rgba(170, 192, 208, 0.2);
+    margin: 0% 3%;
+}
+.button-add {
+    width: 100%;
+    border: none;
+    height: 11%;
+    background-color: #25c16a;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0 0px 4px 4px;
+    position: relative;
+    top: -1%;
+}
+
