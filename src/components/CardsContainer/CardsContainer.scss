@@ -1,7 +1,7 @@
 @import '../../assets/icons.scss'; 
 
 .unit-card {
-    margin: 6% 3% 6% 6%;
+    margin: 3% 3% 6% 6%;
 }
 
 
@@ -12,9 +12,12 @@
     align-content: center;
 }
 
+.max-w {
+	max-width: 85%;
+}
+
 
 .carousel-content {
-    max-width: 80%;
     overflow: hidden !important;
 }
 
@@ -23,6 +26,7 @@
 }
 
 .button-icon-arrow-left {
+	cursor: pointer;
 	background: no-repeat $icon-arrow-left;
 	width: 24px;
 	height: 24px;
@@ -33,6 +37,7 @@
 }
 
 .button-icon-arrow-right {
+	cursor: pointer;
 	background: no-repeat $icon-arrow-right;
 	width: 24px;
 	height: 24px;
@@ -40,4 +45,21 @@
 	background-position: center;
 	display: flex;
     align-self: center;
+}
+
+.margin-label {
+	margin-top: 5%;
+}
+
+.label-carousel {
+    text-align: start;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.span-carousel {
+    color: #40c97d;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
 }

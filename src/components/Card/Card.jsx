@@ -6,7 +6,6 @@ import { getProductsList } from '../../actions/productsActions';
 import './Card.scss';
 
 const Card = ({rowCard}) => {
-    console.log('rowCard', rowCard);
     const {
         title, supplier, tax, price_real, image, thumbnail,
         description, units_sf, slug, category, subcategory,
