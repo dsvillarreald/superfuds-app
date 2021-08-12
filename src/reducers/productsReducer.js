@@ -6,7 +6,9 @@ import {
 
 const initialState = {
     description: null,
-    products: []
+    productsList: [],
+    error: null,
+    loading: false
 }
 
 export default function(state = initialState, action) {
@@ -14,12 +16,15 @@ export default function(state = initialState, action) {
         case GET_PRODUCTS_LIST:
             return {
                 ...state,
-                description: action.payload
+                description: action.payload,
+                loading: true
             }
         case GET_PRODUCTS_LIST_SUCCESS:
             return {
                 ...state,
-                description: action.payload
+                description: null,
+                productsList: action.payload,
+                loading: false
             }
         case GET_PRODUCTS_LIST_FAIL:
             return {

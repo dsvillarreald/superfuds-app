@@ -1,0 +1,43 @@
+@import '../../assets/icons.scss'; 
+
+.unit-card {
+    margin: 6% 3% 6% 6%;
+}
+
+
+.button-div-carousel {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.carousel-content {
+    max-width: 80%;
+    overflow: hidden !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.button-icon-arrow-left {
+	background: no-repeat $icon-arrow-left;
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+    align-self: center;
+}
+
+.button-icon-arrow-right {
+	background: no-repeat $icon-arrow-right;
+	width: 24px;
+	height: 24px;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+    align-self: center;
+}

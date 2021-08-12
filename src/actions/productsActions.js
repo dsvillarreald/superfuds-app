@@ -9,11 +9,12 @@ export function getProductsList() {
     return async (dispatch) => {
         dispatch(getProducts('start method get for produts List'));
         try {
-            await clientAxios.get('/product.json')
-                .them(function (response) {
-                    debugger
-                    dispatch(getProductsSuccess(response));
-                });
+            const response = await clientAxios.get('/product.json');
+            console.log(response.data);
+            if (response.status === 200) {
+                dispatch(getProductsSuccess(response.data));
+            }
+
         } catch (e) {
             dispatch(getProductsFail(e));
         }
