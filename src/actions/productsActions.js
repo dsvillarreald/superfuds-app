@@ -10,7 +10,6 @@ export function getProductsList() {
         dispatch(getProducts('start method get for produts List'));
         try {
             const response = await clientAxios.get('/product.json');
-            console.log(response.data);
             if (response.status === 200) {
                 dispatch(getProductsSuccess(response.data));
             }

@@ -38,17 +38,23 @@ const CardsContainer = () => {
             <div id="btn1" className="button-div-carousel">
                 <div className="button-icon-arrow-left" onClick={() => {scrollLeft()}}></div>
             </div>
-            <div id="carousel" className="d-flex carousel-content">
-            {
-                productsList !== [] ? 
-                    productsList.map(row => (
-                        <div id="element-card" className="unit-card">
-                            <Card key={row.id} rowCard={row} />
-                        </div>
-                    ))
-                 : null
-            }
+            <div className="max-w">
+                <div className="margin-label">
+                    <div className="label-carousel">Nuevo en SuperFuds &nbsp; <span className="span-carousel">Ver más</span></div>
+                </div>
+                <div id="carousel" className="d-flex carousel-content">
+                {
+                    productsList !== [] ? 
+                        productsList.map(row => (
+                            <div id="element-card" className="unit-card">
+                                <Card key={row.id} rowCard={row} />
+                            </div>
+                        ))
+                    : null
+                }
+                </div>
             </div>
+            
             <div id="btn2" className="button-div-carousel">
                 <div className="button-icon-arrow-right" onClick={() => {scrollRight()}}></div>
             </div>
