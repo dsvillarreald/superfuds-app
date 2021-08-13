@@ -8,6 +8,21 @@ import Header from './components/Header/Header';
 import { Provider } from 'react-redux';
 import store from './store';
 
+global.validateTitleLength = title => {
+  if (!!title) {
+      return title.length > 19 ? `${title.substring(0,19)}...` : title;
+  }
+  return null;
+}
+
+global.formatPrice = num => {
+  if(!!num){
+    num = num.split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+    num = num.split('').reverse().join('').replace(/^[\.]/,'');
+    return num;
+  }
+  return num;
+}
 
 function App() {
 

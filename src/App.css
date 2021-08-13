@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.color-green {
+  color: #27c16b;
+}
+.color-grey {
+  color: #777777;
+}
+.weight-700 {
+  font-weight: 700;
+}
+.width-60 {
+  width: 60%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-20 {
+  width: 20%;
+}
+.width-10 {
+  width: 10%;
+}
+
+th {
+  text-align: center !important;
+}
+
+th#first {
+  text-align: start !important;
+}
+
+td#price {
+  text-align: center !important;
+}
