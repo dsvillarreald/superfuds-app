@@ -2,23 +2,20 @@ import react, {useEffect} from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { getProductsList } from '../../actions/productsActions';
+import { setProductCar } from '../../actions/productsActions';
 import './Card.scss';
 
 const Card = ({rowCard}) => {
     const {
-        title, supplier, tax, price_real, image, thumbnail,
-        description, units_sf, slug, category, subcategory,
-        net_content, sellos
-    } = rowCard;
+        title, price_real, image, units_sf,
+        net_content, sellos } = rowCard;
+
+    const dispatch = useDispatch();
    
     const [showButton, setShowButton] = useState(false);
 
-    const validateTitleLength = title => {
-        if (!!title) {
-            return title.length > 19 ? `${title.substring(0,19)}...` : title;
-        }
-        return null;
+    const sendProduct = () => {
+        dispatch(setProductCar(rowCard));
     }
 
     return (
@@ -27,8 +24,7 @@ const Card = ({rowCard}) => {
             <div id="body-card" className="card-body">
                 <div className="d-flex card-header">
                     <img id="image" className="card-image"
-                        src={image}
-                        onClick={() => { console.log('abrir imagencita')}} > 
+                        src={image}> 
                     </img>
                     <div id="options" className="card-options">
                         { !(!!sellos) || sellos === [] ? null :
@@ -61,15 +57,16 @@ const Card = ({rowCard}) => {
                         <div className="text-title">Superfuds</div>
                         <div className="card-gramer" id="gramer">{net_content}</div>
                     </div>
-                    <div className="text-name">{validateTitleLength(title)}</div>
+                    <div className="text-name">{global.validateTitleLength(title)}</div>
                     <div className="text-price-card d-flex">
-                        <div className="span-price-symbol">$</div>{price_real}
-                        <div className="span-price-utits">&nbsp; {`${units_sf} x unids`}</div></div>
+                        <div className="span-price-symbol">$</div>{global.formatPrice(price_real)}
+                        <div className="span-price-utits">&nbsp; {`${units_sf} x unids`}</div>
+                    </div>
                 </div>
             </div>
             {
                 showButton ? 
-                    <button className="button-add" onClick={() => {console.log('agrega ese puto bb')}}>Agregar al carrito</button>
+                    <button className="button-add" onClick={() => {sendProduct()}}>Agregar al carrito</button>
                 : null
             }
         </div>

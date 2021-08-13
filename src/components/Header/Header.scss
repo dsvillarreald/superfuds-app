@@ -87,3 +87,49 @@ input#input-header-search::placeholder {
     font-size: 16px;
     font-weight: 700;
 }
+
+.modal-dialog {
+    max-width: 60%;
+}
+
+.modal-body {
+    height: 56vh;
+}
+
+.back-arrow-modal {
+	cursor: pointer;
+	background: no-repeat $icon-arrow-left;
+	width: 15px;
+	height: 15px;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+    align-self: center;
+}
+
+.cursor-pointier {
+    cursor: pointer;
+}
+
+.market-car-title {
+    font-size: 21px;
+    padding: 5% 0% 1% 0%;
+    font-weight: 800;
+}
+
+.scroll-products {
+    overflow-y: auto;
+    height: 35vh;
+}
+
+.oops-image {
+    width: 150px;
+    height: 150px;
+    background-size: 90% !important;
+    background: no-repeat $oops-image;
+}
+
+.empty-message {
+    font-size: 26px;
+    font-weight: 700;
+}
