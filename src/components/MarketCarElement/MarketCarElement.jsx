@@ -22,6 +22,10 @@ function MarketCarElement({rowProduct, list}) {
         }
         updateSpecific();
     }, [amount, setAmount]);
+
+    const amountPrice = (amount, price) => {
+        return `${parseFloat(price) * amount}`;
+    }
     
     return (
                 <tr>
@@ -50,7 +54,7 @@ function MarketCarElement({rowProduct, list}) {
                     </td>
                     <td id="price">
                     <div className="text-price-card d-flex">
-                        <div className="span-price-symbol">$</div>{global.formatPrice(price_real)}
+                        <div className="span-price-symbol">$</div>{global.formatPrice(amountPrice(amount, price_real))}
                     </div>
                     </td>
                     <td className="col-sm">
